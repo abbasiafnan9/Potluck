@@ -1,13 +1,13 @@
 //  KP
 const User = require("./User");
-const Posts = require("./Posts");
+const Blog = require("./Posts");
 
-User.hasMany(Posts,{
+User.hasMany(Blog,{
     onDelete:"CASCADE"
 });
-Posts.belongsTo(User);
+blog.belongsTo(User);
 
 module.exports={
     User,
-    Posts
+    Blog
 };
