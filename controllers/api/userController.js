@@ -1,12 +1,12 @@
 // KP
 const express = require('express');
 const router = express.Router();
-const {User,Posts} = require('../../models');
+const {User, Blog} = require('../../models');
 const bcrypt = require("bcrypt");
 
 router.get("/",(req,res)=>{
     User.findAll({
-        include:[?,?]
+        include:[User, Blog]
     }).then(dbUsers=>{
         if(dbUsers.length){
             res.json(dbUsers)

@@ -1,11 +1,13 @@
-//  KP
 const express = require('express');
 const router = express.Router();
 
-const userRoutes = require("./userController");
-router.use("/users",userRoutes);
+const frontEndRoutes = require("./frontEndRoutes.js");
+router.use(frontEndRoutes);
 
-const petRoutes = require("./petsController");
-router.use("/pets",petRoutes);
+const apiRoutes = require("./api");
+router.use("/api",apiRoutes);
+
+const sessionRoutes = require("./sessionsRoutes")
+router.use("/sessions",sessionRoutes)
 
 module.exports = router;
